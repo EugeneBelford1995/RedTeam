@@ -1,4 +1,4 @@
-# Mishky-s-PowerView
+# Mishky's Red Team Auditor
 Essentially an idea borrowed from harmj0y &amp; converted into native PowerShell, also checks nested groups.
 
 This little query and it's Blue Team version were the capstones of our Auditing AD Series (https://happycamper84.medium.com/how-many-angels-can-dance-on-the-head-of-a-pin-16fe786e658b). 
