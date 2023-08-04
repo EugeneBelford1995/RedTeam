@@ -8,3 +8,5 @@ The Red Team version pulls all groups, including nexted groups, that the current
 It only uses Get-ADNestedGroups.ps1 and the PowerShell AD module, so it does not trip Defender and will run on any domain workstation as any Domain User. 
 
 If you do not already have the PowerShell AD module loaded, then see our github repo that hosts it. The files are from Microsoft.
+
+RedTeam.ps1 is the updated, improved version. The other *.ps1 is the orginal PoC.
