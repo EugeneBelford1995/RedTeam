@@ -10,3 +10,9 @@ It only uses Get-ADNestedGroups.ps1 and the PowerShell AD module, so it does not
 If you do not already have the PowerShell AD module loaded, then see our github repo that hosts it. The files are from Microsoft.
 
 RedTeam.ps1 is the updated, improved version. The other *.ps1 is the orginal PoC.
+
+# Mishky's 'Dangerous Rights' Abuse Tool
+
+It's mildly useful. It can abuse some common ACL misconfigurations without the person running it needing to know Set-Acl syntax themselves.
+
+We tested it out by seizing ownership of a group, giving ourselves GenericAll, and then joining the group. We also reset a password with it. 
