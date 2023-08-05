@@ -1,4 +1,4 @@
-﻿#Run/import Get-ADNestedGroups.ps1 first! (Available from: http://blog.tofte-it.dk/powershell-get-all-nested-groups-for-a-user-in-active-directory/)
+#Run/import Get-ADNestedGroups.ps1 first! (Available from: http://blog.tofte-it.dk/powershell-get-all-nested-groups-for-a-user-in-active-directory/)
 
 function Get-Rights
 {
@@ -8,12 +8,13 @@ $me = $env:USERNAME
 
 Import-Module ActiveDirectory
 Import-Module .\Get-ADNestedGroups.ps1 -ErrorAction SilentlyContinue
-Try {
-If(Get-ADObject -Filter {SamAccountName -eq $me}){The-Engine}
-Else{Write-Host "You might have made a typo, SamAccountName not found."}
 
-} #Close the Try 
-Catch{Write-Host "You might have made a typo."}
+If(Get-ADObject -Filter {SamAccountName -eq $me})
+{
+If((Get-ADUserNestedGroups (Get-ADObject -Filter {SamAccountName -eq $me}).DistinguishedName).Name.Count -ge 1){The-Engine}
+} #Close the outer If
+Else{Write-Host "You might have made a typo; SamAccountName not found or the user is not in any groups."}
+
 } #Close the function
 
 
