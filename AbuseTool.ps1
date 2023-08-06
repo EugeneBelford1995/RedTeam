@@ -20,7 +20,7 @@ function Show-Menu {
     Write-Host "1. Take Ownership, then grant Full Control. (Use if you have WriteOwner.)"
     Write-Host "2. Grant yourself Full Control. (Use if you have WriteDACL.)"
     Write-Host "3. Add yourself to a group. (Use if you have Self, WriteProperty, etc.)"
-    Write-Host "4. Give yourself DCSync rights. (Use if you have ExtendedRight on the domain root.)"
+    Write-Host "4. Give yourself DCSync rights. (Use if you have WriteDACL on the domain root.)"
     Write-Host "5. Reset a user's password. (Use if you have ExtendedRight on the user.)"
     Write-Host "6. Check Mishka's Dangerous Rights Cheatsheet. (Use if you're lost.)"
     Write-Host "Q. Press 'Q' to quit."
