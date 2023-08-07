@@ -16,3 +16,5 @@ RedTeam.ps1 is the updated, improved version. The other *.ps1 is the orginal PoC
 It's mildly useful. It can abuse some common ACL misconfigurations without the person running it needing to know Set-Acl syntax themselves.
 
 We tested it out by seizing ownership of a group, giving ourselves GenericAll, and then joining the group. We also reset a password with it. 
+
+An example of how to use these to abuse a scenario is here: https://happycamper84.medium.com/enumerating-abusing-ad-acls-using-mishkys-redteam-abusetool-b147d2ed08d9
