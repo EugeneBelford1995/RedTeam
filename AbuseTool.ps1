@@ -81,7 +81,7 @@ Try
 {
 
 $target = Read-Host "Enter the SamAccountName of the group you want to add yourself to."
-$class = (Get-ADObject -Filter {SamAccountName -eq "$target"}).ObjectClass
+$class = (Get-ADObject -Filter {SamAccountName -eq $target}).ObjectClass
 
 If($class -eq "group") {Add-ADGroupMember -Identity "$target" -Members $me}
 ElseIf($class -eq $null) {Write-Host "The specified SamAccountName does not exist."}
